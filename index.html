@@ -53,6 +53,12 @@
             <button onclick="switchTab('cpm-tab')" id="btn-cpm-tab" class="text-xs font-semibold px-4 py-3 border-b-2 border-transparent text-zinc-500 hover:text-zinc-300 transition-all cursor-pointer">CPM & CPC</button>
             <button onclick="switchTab('conversion-tab')" id="btn-conversion-tab" class="text-xs font-semibold px-4 py-3 border-b-2 border-transparent text-zinc-500 hover:text-zinc-300 transition-all cursor-pointer">Conversion</button>
             <button onclick="switchTab('ab-tab')" id="btn-ab-tab" class="text-xs font-semibold px-4 py-3 border-b-2 border-transparent text-zinc-500 hover:text-zinc-300 transition-all cursor-pointer">A/B Significance</button>
+            // Dynamic Title Logic
+if(tabId === 'roi-tab') document.title = "ROI & ROAS Calculator | MetricsLab Pro";
+if(tabId === 'cpm-tab') document.title = "CPM & CPC Campaign Calculator | MetricsLab Pro";
+if(tabId === 'conversion-tab') document.title = "Conversion Rate Funnel Calculator | MetricsLab Pro";
+if(tabId === 'ab-tab') document.title = "A/B Test Statistical Significance Calculator | MetricsLab Pro";
+
         </div>
 
         <!-- Core Grid Structure -->
