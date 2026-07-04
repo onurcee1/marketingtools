@@ -3,188 +3,223 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advanced Digital Marketing Calculators | ROI, ROAS, CPM, CPC & Conversion</title>
-    <meta name="description" content="Free all-in-one digital marketing toolkit. Calculate ROI, ROAS, CPM, CPC, and Conversion Rate instantly with high precision. Built for modern ad agencies.">
+    <title>MetricsLab Pro | Premium Digital Marketing Intelligence Suite</title>
+    <meta name="description" content="An enterprise-grade marketing toolkit for digital agencies. Compute high-precision ROI, ROAS, CPM, and A/B testing variables without client-side lag.">
     <!-- Tailwind CSS -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!-- Google Fonts -->
+    <!-- Premium Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; letter-spacing: -0.01em; }
     </style>
 </head>
-<body class="bg-[#0f172a] text-[#f8fafc] min-h-screen flex flex-col justify-between">
+<body class="bg-[#09090b] text-[#fafafa] min-h-screen flex flex-col justify-between selection:bg-zinc-800 selection:text-white">
 
-    <!-- Header -->
-    <header class="border-b border-slate-800 bg-slate-900/50 backdrop-blur-md sticky top-0 z-50">
-        <div class="max-w-5xl mx-auto px-4 py-4 flex justify-between items-center">
-            <div class="flex items-center space-x-2">
-                <div class="bg-emerald-500 text-slate-950 p-2 rounded-lg font-bold text-sm tracking-wider">LAB</div>
-                <span class="font-semibold text-lg tracking-tight">MetricsLab</span>
+    <!-- Premium Navigation / Brand -->
+    <header class="border-b border-zinc-800/80 bg-[#09090b]/80 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <span class="font-bold text-base tracking-tight text-white">MetricsLab<span class="text-zinc-500 font-normal">.pro</span></span>
             </div>
-            <span class="text-xs bg-slate-800 px-2.5 py-1 rounded-full text-slate-400 border border-slate-700">v2.0 - Pro Toolkit</span>
+            <div class="flex items-center space-x-4">
+                <span class="text-[11px] font-medium text-zinc-400 bg-zinc-900 border border-zinc-800 px-2.5 py-1 rounded-md tracking-wide">Enterprise Suite</span>
+            </div>
         </div>
     </header>
 
-    <!-- Main -->
-    <main class="max-w-5xl w-full mx-auto px-4 py-8 flex-grow">
+    <!-- Main Wrapper -->
+    <main class="max-w-5xl w-full mx-auto px-6 py-12 flex-grow">
         
-        <!-- AD PLACEHOLDER (TOP) -->
-        <div class="w-full bg-slate-900/40 border border-dashed border-slate-700 rounded-xl p-4 mb-8 text-center text-xs text-slate-500 tracking-widest">
-            ADVERTISEMENT DISPLAY AREA
+        <!-- Subtle Ad Container -->
+        <div class="w-full bg-zinc-900/30 border border-zinc-800/60 rounded-lg p-3 mb-12 text-center text-[10px] text-zinc-500 tracking-wider">
+            ADVERTISEMENT BOARD
         </div>
 
-        <div class="text-center max-w-2xl mx-auto mb-8">
-            <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight bg-gradient-to-r from-emerald-400 to-teal-200 bg-clip-text text-transparent">
-                Digital Marketing Suite
+        <!-- Humanized Editorial Intro -->
+        <div class="max-w-xl mb-12">
+            <h1 class="text-2xl md:text-3xl font-bold tracking-tight text-white mb-3">
+                Streamline your campaign math.
             </h1>
-            <p class="text-slate-400 mt-2 text-sm md:text-base">
-                Switch between high-precision tools to audit your ad campaigns and marketing metrics.
+            <p class="text-zinc-400 text-sm leading-relaxed">
+                No bloated tracking, no cloud latency. A minimal workstation built for digital acquisition managers and growth engineers to audit paid media performance instantly.
             </p>
         </div>
 
-        <!-- Navigation Tabs -->
-        <div class="flex flex-wrap justify-center gap-2 mb-8 bg-slate-950 p-1.5 rounded-xl border border-slate-800 max-w-2xl mx-auto">
-            <button onclick="switchTab('roi-tab')" id="btn-roi-tab" class="flex-1 text-xs md:text-sm font-semibold px-4 py-2.5 rounded-lg transition-all cursor-pointer text-center bg-emerald-500 text-slate-950">
-                ROI / ROAS
-            </button>
-            <button onclick="switchTab('cpm-tab')" id="btn-cpm-tab" class="flex-1 text-xs md:text-sm font-semibold px-4 py-2.5 rounded-lg transition-all cursor-pointer text-center text-slate-400 hover:text-slate-200">
-                CPM / CPC
-            </button>
-            <button onclick="switchTab('conversion-tab')" id="btn-conversion-tab" class="flex-1 text-xs md:text-sm font-semibold px-4 py-2.5 rounded-lg transition-all cursor-pointer text-center text-slate-400 hover:text-slate-200">
-                Conversion
-            </button>
+        <!-- Premium Human-Centered Tab Bar -->
+        <div class="flex flex-wrap border-b border-zinc-800 mb-8 gap-1">
+            <button onclick="switchTab('roi-tab')" id="btn-roi-tab" class="text-xs font-semibold px-4 py-3 border-b-2 border-white text-white transition-all cursor-pointer">ROI & ROAS</button>
+            <button onclick="switchTab('cpm-tab')" id="btn-cpm-tab" class="text-xs font-semibold px-4 py-3 border-b-2 border-transparent text-zinc-500 hover:text-zinc-300 transition-all cursor-pointer">CPM & CPC</button>
+            <button onclick="switchTab('conversion-tab')" id="btn-conversion-tab" class="text-xs font-semibold px-4 py-3 border-b-2 border-transparent text-zinc-500 hover:text-zinc-300 transition-all cursor-pointer">Conversion</button>
+            <button onclick="switchTab('ab-tab')" id="btn-ab-tab" class="text-xs font-semibold px-4 py-3 border-b-2 border-transparent text-zinc-500 hover:text-zinc-300 transition-all cursor-pointer">A/B Significance</button>
         </div>
 
-        <!-- CALCULATOR SECTIONS -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+        <!-- Core Grid Structure -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-start">
             
-            <!-- LEFT COLUMN: INPUTS -->
-            <div class="bg-slate-950 p-6 rounded-2xl border border-slate-800 shadow-xl">
+            <!-- Left Column: Variable Adjustments (5 Cols) -->
+            <div class="md:col-span-5 space-y-6">
                 
-                <!-- TAB 1: ROI/ROAS INPUTS -->
-                <div id="roi-tab" class="tab-content space-y-4">
-                    <h2 class="text-lg font-semibold text-slate-200 border-b border-slate-800 pb-2 mb-4">ROI & ROAS Metrics</h2>
+                <!-- TAB 1 CONTENT -->
+                <div id="roi-tab" class="tab-content space-y-5">
                     <div>
-                        <label class="block text-xs font-medium text-slate-400 uppercase tracking-wider mb-1">Total Ad Spend ($)</label>
-                        <input type="number" id="adSpend" value="1000" oninput="calculateAll()" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2.5 text-slate-100 focus:outline-none focus:border-emerald-500">
+                        <label class="block text-xs font-medium text-zinc-400 mb-1.5">Direct Ad Spend ($)</label>
+                        <input type="number" id="adSpend" value="1000" oninput="calculateAll()" class="w-full bg-zinc-900 border border-zinc-800 rounded-md px-3 py-2 text-sm text-white focus:outline-none focus:border-zinc-600 transition-colors">
+                        <span class="text-[10px] text-zinc-500 mt-1 block">Total platform billing (Meta, Google, etc.)</span>
                     </div>
                     <div>
-                        <label class="block text-xs font-medium text-slate-400 uppercase tracking-wider mb-1">Total Revenue ($)</label>
-                        <input type="number" id="revenue" value="3500" oninput="calculateAll()" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2.5 text-slate-100 focus:outline-none focus:border-emerald-500">
+                        <label class="block text-xs font-medium text-zinc-400 mb-1.5">Gross Revenue ($)</label>
+                        <input type="number" id="revenue" value="3500" oninput="calculateAll()" class="w-full bg-zinc-900 border border-zinc-800 rounded-md px-3 py-2 text-sm text-white focus:outline-none focus:border-zinc-600 transition-colors">
                     </div>
                     <div>
-                        <label class="block text-xs font-medium text-slate-400 uppercase tracking-wider mb-1">Other Costs ($)</label>
-                        <input type="number" id="otherCosts" value="200" oninput="calculateAll()" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2.5 text-slate-100 focus:outline-none focus:border-emerald-500">
-                    </div>
-                </div>
-
-                <!-- TAB 2: CPM/CPC INPUTS -->
-                <div id="cpm-tab" class="tab-content space-y-4 hidden">
-                    <h2 class="text-lg font-semibold text-slate-200 border-b border-slate-800 pb-2 mb-4">CPM & CPC Metrics</h2>
-                    <div>
-                        <label class="block text-xs font-medium text-slate-400 uppercase tracking-wider mb-1">Total Campaign Cost ($)</label>
-                        <input type="number" id="campaignCost" value="500" oninput="calculateAll()" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2.5 text-slate-100 focus:outline-none focus:border-emerald-500">
-                    </div>
-                    <div>
-                        <label class="block text-xs font-medium text-slate-400 uppercase tracking-wider mb-1">Total Impressions</label>
-                        <input type="number" id="impressions" value="50000" oninput="calculateAll()" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2.5 text-slate-100 focus:outline-none focus:border-emerald-500">
-                    </div>
-                    <div>
-                        <label class="block text-xs font-medium text-slate-400 uppercase tracking-wider mb-1">Total Clicks</label>
-                        <input type="number" id="clicks" value="1200" oninput="calculateAll()" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2.5 text-slate-100 focus:outline-none focus:border-emerald-500">
+                        <label class="block text-xs font-medium text-zinc-400 mb-1.5">Overhead & Management Costs ($)</label>
+                        <input type="number" id="otherCosts" value="200" oninput="calculateAll()" class="w-full bg-zinc-900 border border-zinc-800 rounded-md px-3 py-2 text-sm text-white focus:outline-none focus:border-zinc-600 transition-colors">
                     </div>
                 </div>
 
-                <!-- TAB 3: CONVERSION INPUTS -->
-                <div id="conversion-tab" class="tab-content space-y-4 hidden">
-                    <h2 class="text-lg font-semibold text-slate-200 border-b border-slate-800 pb-2 mb-4">Conversion Metrics</h2>
+                <!-- TAB 2 CONTENT -->
+                <div id="cpm-tab" class="tab-content space-y-5 hidden">
                     <div>
-                        <label class="block text-xs font-medium text-slate-400 uppercase tracking-wider mb-1">Total Visitors / Clicks</label>
-                        <input type="number" id="convClicks" value="2500" oninput="calculateAll()" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2.5 text-slate-100 focus:outline-none focus:border-emerald-500">
+                        <label class="block text-xs font-medium text-zinc-400 mb-1.5">Gross Campaign Spend ($)</label>
+                        <input type="number" id="campaignCost" value="500" oninput="calculateAll()" class="w-full bg-zinc-900 border border-zinc-800 rounded-md px-3 py-2 text-sm text-white focus:outline-none focus:border-zinc-600 transition-colors">
                     </div>
                     <div>
-                        <label class="block text-xs font-medium text-slate-400 uppercase tracking-wider mb-1">Total Conversions / Sales</label>
-                        <input type="number" id="conversions" value="75" oninput="calculateAll()" class="w-full bg-slate-900 border border-slate-700 rounded-lg px-4 py-2.5 text-slate-100 focus:outline-none focus:border-emerald-500">
+                        <label class="block text-xs font-medium text-zinc-400 mb-1.5">Total Generated Impressions</label>
+                        <input type="number" id="impressions" value="50000" oninput="calculateAll()" class="w-full bg-zinc-900 border border-zinc-800 rounded-md px-3 py-2 text-sm text-white focus:outline-none focus:border-zinc-600 transition-colors">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-medium text-zinc-400 mb-1.5">Link Clicks Received</label>
+                        <input type="number" id="clicks" value="1200" oninput="calculateAll()" class="w-full bg-zinc-900 border border-zinc-800 rounded-md px-3 py-2 text-sm text-white focus:outline-none focus:border-zinc-600 transition-colors">
+                    </div>
+                </div>
+
+                <!-- TAB 3 CONTENT -->
+                <div id="conversion-tab" class="tab-content space-y-5 hidden">
+                    <div>
+                        <label class="block text-xs font-medium text-zinc-400 mb-1.5">Total Unique Clicks/Traffic</label>
+                        <input type="number" id="convClicks" value="2500" oninput="calculateAll()" class="w-full bg-zinc-900 border border-zinc-800 rounded-md px-3 py-2 text-sm text-white focus:outline-none focus:border-zinc-600 transition-colors">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-medium text-zinc-400 mb-1.5">Successful Conversions</label>
+                        <input type="number" id="conversions" value="75" oninput="calculateAll()" class="w-full bg-zinc-900 border border-zinc-800 rounded-md px-3 py-2 text-sm text-white focus:outline-none focus:border-zinc-600 transition-colors">
+                    </div>
+                </div>
+
+                <!-- TAB 4 CONTENT -->
+                <div id="ab-tab" class="tab-content space-y-5 hidden">
+                    <h3 class="text-xs font-bold uppercase tracking-wider text-zinc-400 mb-2">Variant A (Control)</h3>
+                    <div class="grid grid-cols-2 gap-3">
+                        <div>
+                            <label class="block text-[11px] text-zinc-400 mb-1">Clicks</label>
+                            <input type="number" id="abClicksA" value="1000" oninput="calculateAll()" class="w-full bg-zinc-900 border border-zinc-800 rounded-md px-3 py-2 text-xs text-white focus:outline-none focus:border-zinc-600">
+                        </div>
+                        <div>
+                            <label class="block text-[11px] text-zinc-400 mb-1">Conversions</label>
+                            <input type="number" id="abConvA" value="50" oninput="calculateAll()" class="w-full bg-zinc-900 border border-zinc-800 rounded-md px-3 py-2 text-xs text-white focus:outline-none focus:border-zinc-600">
+                        </div>
+                    </div>
+                    <h3 class="text-xs font-bold uppercase tracking-wider text-zinc-400 pt-2 mb-2">Variant B (Test)</h3>
+                    <div class="grid grid-cols-2 gap-3">
+                        <div>
+                            <label class="block text-[11px] text-zinc-400 mb-1">Clicks</label>
+                            <input type="number" id="abClicksB" value="1100" oninput="calculateAll()" class="w-full bg-zinc-900 border border-zinc-800 rounded-md px-3 py-2 text-xs text-white focus:outline-none focus:border-zinc-600">
+                        </div>
+                        <div>
+                            <label class="block text-[11px] text-zinc-400 mb-1">Conversions</label>
+                            <input type="number" id="abConvB" value="72" oninput="calculateAll()" class="w-full bg-zinc-900 border border-zinc-800 rounded-md px-3 py-2 text-xs text-white focus:outline-none focus:border-zinc-600">
+                        </div>
                     </div>
                 </div>
 
             </div>
 
-            <!-- RIGHT COLUMN: DYNAMIC RESULTS -->
-            <div class="bg-slate-900/50 p-6 rounded-2xl border border-slate-800 flex flex-col justify-between min-h-[340px]">
+            <!-- Right Column: Outputs & Data Visuals (7 Cols) -->
+            <div class="md:col-span-7 bg-zinc-900/20 border border-zinc-800/80 rounded-xl p-8 min-h-[320px] flex flex-col justify-between">
                 
-                <!-- ROI RESULTS DISPLAY -->
-                <div id="roi-results" class="result-content space-y-4">
-                    <h2 class="text-lg font-semibold text-slate-200 border-b border-slate-800 pb-2">Analysis Results</h2>
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="bg-slate-950 p-4 rounded-xl border border-slate-800">
-                            <span class="block text-[10px] uppercase font-bold tracking-wider text-slate-500">ROAS</span>
-                            <span id="roasResult" class="text-2xl font-bold text-emerald-400">3.50x</span>
+                <!-- TAB 1 OUTPUTS -->
+                <div id="roi-results" class="result-content space-y-6">
+                    <span class="text-xs text-zinc-500 font-medium tracking-tight">Financial Performance Breakdown</span>
+                    <div class="grid grid-cols-2 gap-6 pt-2">
+                        <div>
+                            <span class="block text-[10px] font-bold text-zinc-500 tracking-wider uppercase">Return on Ad Spend</span>
+                            <span id="roasResult" class="text-4xl font-semibold tracking-tight text-white mt-1 block">3.50x</span>
                         </div>
-                        <div class="bg-slate-950 p-4 rounded-xl border border-slate-800">
-                            <span class="block text-[10px] uppercase font-bold tracking-wider text-slate-500">ROI</span>
-                            <span id="roiResult" class="text-2xl font-bold text-teal-400">191.67%</span>
+                        <div>
+                            <span class="block text-[10px] font-bold text-zinc-500 tracking-wider uppercase">Net Return on Invest</span>
+                            <span id="roiResult" class="text-4xl font-semibold tracking-tight text-white mt-1 block">191.67%</span>
                         </div>
                     </div>
-                    <div class="space-y-2 text-sm pt-2">
-                        <div class="flex justify-between border-b border-slate-800/60 pb-1.5"><span class="text-slate-400">Net Profit:</span><span id="netProfitResult" class="font-semibold">$2,300.00</span></div>
-                        <div class="flex justify-between border-b border-slate-800/60 pb-1.5"><span class="text-slate-400">Total Costs:</span><span id="totalCostResult" class="font-semibold">$1,200.00</span></div>
-                        <div class="flex justify-between"><span class="text-slate-400">Status:</span><span id="statusResult" class="font-bold text-emerald-500">PROFITABLE</span></div>
+                    <div class="space-y-2.5 pt-4 border-t border-zinc-800 text-xs">
+                        <div class="flex justify-between"><span class="text-zinc-400">Net Profitability</span><span id="netProfitResult" class="font-medium text-white">$2,300.00</span></div>
+                        <div class="flex justify-between"><span class="text-zinc-400">Total Capital Spent</span><span id="totalCostResult" class="font-medium text-white">$1,200.00</span></div>
+                        <div class="flex justify-between pt-1"><span class="text-zinc-400">Campaign Health</span><span id="statusResult" class="font-bold tracking-wide text-zinc-300">PROFITABLE</span></div>
                     </div>
                 </div>
 
-                <!-- CPM RESULTS DISPLAY -->
-                <div id="cpm-results" class="result-content space-y-4 hidden">
-                    <h2 class="text-lg font-semibold text-slate-200 border-b border-slate-800 pb-2">Cost Analysis</h2>
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="bg-slate-950 p-4 rounded-xl border border-slate-800">
-                            <span class="block text-[10px] uppercase font-bold tracking-wider text-slate-500">CPM <span class="text-[8px] text-slate-500">(Per 1K Imps)</span></span>
-                            <span id="cpmResult" class="text-2xl font-bold text-emerald-400">$10.00</span>
+                <!-- TAB 2 OUTPUTS -->
+                <div id="cpm-results" class="result-content space-y-6 hidden">
+                    <span class="text-xs text-zinc-500 font-medium tracking-tight">Cost Efficiency Metrics</span>
+                    <div class="grid grid-cols-2 gap-6 pt-2">
+                        <div>
+                            <span class="block text-[10px] font-bold text-zinc-500 tracking-wider uppercase">Cost Per Thousand (CPM)</span>
+                            <span id="cpmResult" class="text-4xl font-semibold tracking-tight text-white mt-1 block">$10.00</span>
                         </div>
-                        <div class="bg-slate-950 p-4 rounded-xl border border-slate-800">
-                            <span class="block text-[10px] uppercase font-bold tracking-wider text-slate-500">CPC <span class="text-[8px] text-slate-500">(Per Click)</span></span>
-                            <span id="cpcResult" class="text-2xl font-bold text-teal-400">$0.42</span>
+                        <div>
+                            <span class="block text-[10px] font-bold text-zinc-500 tracking-wider uppercase">Cost Per Click (CPC)</span>
+                            <span id="cpcResult" class="text-4xl font-semibold tracking-tight text-white mt-1 block">$0.42</span>
                         </div>
                     </div>
-                    <div class="space-y-2 text-sm pt-2">
-                        <div class="flex justify-between border-b border-slate-800/60 pb-1.5"><span class="text-slate-400">CTR (Click-Through Rate):</span><span id="ctrResult" class="font-semibold">2.40%</span></div>
+                    <div class="space-y-2.5 pt-4 border-t border-zinc-800 text-xs">
+                        <div class="flex justify-between"><span class="text-zinc-400">Click-Through Efficiency (CTR)</span><span id="ctrResult" class="font-medium text-white">2.40%</span></div>
                     </div>
                 </div>
 
-                <!-- CONVERSION RESULTS DISPLAY -->
-                <div id="conversion-results" class="result-content space-y-4 hidden">
-                    <h2 class="text-lg font-semibold text-slate-200 border-b border-slate-800 pb-2">Conversion Analysis</h2>
-                    <div class="bg-slate-950 p-6 rounded-xl border border-slate-800 text-center">
-                        <span class="block text-xs uppercase font-bold tracking-wider text-slate-500 mb-1">Conversion Rate</span>
-                        <span id="conversionRateResult" class="text-4xl font-extrabold text-emerald-400">3.00%</span>
+                <!-- TAB 3 OUTPUTS -->
+                <div id="conversion-results" class="result-content space-y-6 hidden">
+                    <span class="text-xs text-zinc-500 font-medium tracking-tight">Conversion Asset Health</span>
+                    <div class="pt-2">
+                        <span class="block text-[10px] font-bold text-zinc-500 tracking-wider uppercase mb-1">Funnel Conversion Rate</span>
+                        <span id="conversionRateResult" class="text-5xl font-bold tracking-tight text-white">3.00%</span>
                     </div>
                 </div>
 
-                <!-- AD PLACEHOLDER (INSIDE BOX) -->
-                <div class="w-full bg-slate-950 border border-slate-800 rounded-lg p-2 mt-4 text-center text-[10px] text-slate-600">
-                    Sponsored Link Placeholder
+                <!-- TAB 4 OUTPUTS -->
+                <div id="ab-results" class="result-content space-y-6 hidden">
+                    <span class="text-xs text-zinc-500 font-medium tracking-tight">Statistical Validation Result</span>
+                    <div class="pt-2 space-y-4">
+                        <div>
+                            <span class="block text-[10px] font-bold text-zinc-500 tracking-wider uppercase mb-1">Confidence Score (P-Value)</span>
+                            <span id="abConfidence" class="text-3xl font-bold text-white">92.4%</span>
+                        </div>
+                        <div class="bg-zinc-900/60 border border-zinc-800 p-3 rounded-md">
+                            <p id="abWinnerMessage" class="text-xs text-zinc-400 leading-normal">Calculating data certainty...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Clean Ad Slot Below Results -->
+                <div class="w-full bg-zinc-900/10 border border-zinc-800 rounded p-2 mt-6 text-center text-[9px] text-zinc-600 tracking-wider">
+                    SPONSORED META CONTAINER
                 </div>
             </div>
 
         </div>
 
-        <!-- SEO Content -->
-        <section class="mt-16 border-t border-slate-800 pt-10 max-w-3xl mx-auto space-y-6 text-sm text-slate-400 leading-relaxed">
+        <!-- Professional Editorial SEO Section (Built for Humans & Crawlers) -->
+        <section class="mt-24 border-t border-zinc-800 pt-12 max-w-3xl space-y-8 text-xs text-zinc-400 leading-relaxed">
             <div>
-                <h3 class="text-xl font-bold text-slate-200 mb-2">Essential Digital Marketing Formulars Explained</h3>
-                <p>Maintaining a highly data-driven approach is the key to scaling digital advertising across channels like Google, Meta, and TikTok. This professional multi-tool simplifies routine math for ad optimization workflows.</p>
+                <h3 class="text-sm font-semibold text-white mb-2">How Data Attribution Works inside Advanced Growth Loops</h3>
+                <p>Modern performance marketing relies on multi-touch data compilation. Relying solely on basic ad network pixels often leads to data inflation. Growth teams utilize native client-side calculators to cross-examine core metrics manually to protect operational margins.</p>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
-                <div class="bg-slate-950 p-4 rounded-xl border border-slate-800">
-                    <h4 class="font-bold text-slate-300 mb-1">CPM (Cost Per Mille)</h4>
-                    <p>Formula: (Total Cost / Total Impressions) * 1,000. It gauges the cost-effectiveness of your awareness campaigns per one thousand views.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-zinc-500">
+                <div>
+                    <h4 class="font-semibold text-zinc-300 mb-1">A/B Significance Testing</h4>
+                    <p>Uses standard Chi-Square distribution variants to understand if Variation B outperformed Variation A due to a legitimate marketing edge or raw statistical noise.</p>
                 </div>
-                <div class="bg-slate-950 p-4 rounded-xl border border-slate-800">
-                    <h4 class="font-bold text-slate-300 mb-1">Conversion Rate</h4>
-                    <p>Formula: (Conversions / Total Clicks) * 100. It benchmarks how effectively your landing page turns raw interest into paid conversions.</p>
+                <div>
+                    <h4 class="font-semibold text-zinc-300 mb-1">The True Cost of Inventory</h4>
+                    <p>Fluctuating CPM variables signal ad frequency fatigue or shifts in auction competition tiers. Monitoring this daily tells media buyers when to swap ad creatives.</p>
                 </div>
             </div>
         </section>
@@ -192,43 +227,37 @@
     </main>
 
     <!-- Footer -->
-    <footer class="border-t border-slate-800 bg-slate-950/80 py-6 text-center text-xs text-slate-500">
-        <div class="max-w-5xl mx-auto px-4 space-y-2">
-            <p>&copy; 2026 MetricsLab. All financial formulas are standardized for general business practices.</p>
-            <div class="flex justify-center space-x-4">
-                <a href="privacy.html" class="hover:text-emerald-400 transition-colors">Privacy Policy</a>
-                <a href="terms.html" class="hover:text-emerald-400 transition-colors">Terms of Service</a>
+    <footer class="border-t border-zinc-800 bg-[#09090b] py-8 text-center text-[11px] text-zinc-500">
+        <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p>&copy; 2026 MetricsLab. Engineered with native web scripts.</p>
+            <div class="flex space-x-6">
+                <a href="privacy.html" class="hover:text-zinc-300 transition-colors">Privacy Policy</a>
+                <a href="terms.html" class="hover:text-zinc-300 transition-colors">Terms of Service</a>
             </div>
         </div>
     </footer>
 
-    <!-- Tab Logic & High Precision Math Script -->
+    <!-- Tab Logic & Enterprise Math Engine -->
     <script>
         function switchTab(tabId) {
-            // Hide all inputs and results
             document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
             document.querySelectorAll('.result-content').forEach(el => el.classList.add('hidden'));
             
-            // Remove active classes from buttons
-            ['roi-tab', 'cpm-tab', 'conversion-tab'].forEach(id => {
+            ['roi-tab', 'cpm-tab', 'conversion-tab', 'ab-tab'].forEach(id => {
                 const btn = document.getElementById('btn-' + id);
-                btn.className = "flex-1 text-xs md:text-sm font-semibold px-4 py-2.5 rounded-lg transition-all cursor-pointer text-center text-slate-400 hover:text-slate-200";
+                btn.className = "text-xs font-semibold px-4 py-3 border-b-2 border-transparent text-zinc-500 hover:text-zinc-300 transition-all cursor-pointer";
             });
 
-            // Show selected tab and results
             document.getElementById(tabId).classList.remove('hidden');
             document.getElementById(tabId.replace('-tab', '-results')).classList.remove('hidden');
-            
-            // Style active button
-            document.getElementById('btn-' + tabId).className = "flex-1 text-xs md:text-sm font-semibold px-4 py-2.5 rounded-lg transition-all cursor-pointer text-center bg-emerald-500 text-slate-950";
+            document.getElementById('btn-' + tabId).className = "text-xs font-semibold px-4 py-3 border-b-2 border-white text-white transition-all cursor-pointer";
         }
 
         function calculateAll() {
-            // 1. ROI / ROAS Calculations
+            // 1. ROI / ROAS
             const adSpend = parseFloat(document.getElementById('adSpend').value) || 0;
             const revenue = parseFloat(document.getElementById('revenue').value) || 0;
             const otherCosts = parseFloat(document.getElementById('otherCosts').value) || 0;
-
             const totalInvestment = adSpend + otherCosts;
             const netProfit = revenue - totalInvestment;
             const roas = adSpend > 0 ? (revenue / adSpend) : 0;
@@ -240,15 +269,14 @@
             document.getElementById('totalCostResult').innerText = '$' + totalInvestment.toLocaleString('en-US', {minimumFractionDigits: 2});
 
             const statusEl = document.getElementById('statusResult');
-            if (netProfit > 0) { statusEl.innerText = 'PROFITABLE'; statusEl.className = 'text-sm font-bold text-emerald-500'; }
-            else if (netProfit < 0) { statusEl.innerText = 'UNPROFITABLE'; statusEl.className = 'text-sm font-bold text-rose-500'; }
-            else { statusEl.innerText = 'BREAK-EVEN'; statusEl.className = 'text-sm font-bold text-amber-500'; }
+            if (netProfit > 0) { statusEl.innerText = 'PROFITABLE RUN'; statusEl.className = 'font-bold tracking-wide text-zinc-200'; }
+            else if (netProfit < 0) { statusEl.innerText = 'LOSING MARGIN'; statusEl.className = 'font-bold tracking-wide text-zinc-500'; }
+            else { statusEl.innerText = 'BREAK-EVEN'; statusEl.className = 'font-bold tracking-wide text-zinc-400'; }
 
-            // 2. CPM / CPC Calculations
+            // 2. CPM / CPC
             const campaignCost = parseFloat(document.getElementById('campaignCost').value) || 0;
             const impressions = parseFloat(document.getElementById('impressions').value) || 0;
             const clicks = parseFloat(document.getElementById('clicks').value) || 0;
-
             const cpm = impressions > 0 ? (campaignCost / impressions) * 1000 : 0;
             const cpc = clicks > 0 ? (campaignCost / clicks) : 0;
             const ctr = impressions > 0 ? (clicks / impressions) * 100 : 0;
@@ -257,15 +285,49 @@
             document.getElementById('cpcResult').innerText = '$' + cpc.toFixed(2);
             document.getElementById('ctrResult').innerText = ctr.toFixed(2) + '%';
 
-            // 3. Conversion Calculations
+            // 3. Conversion
             const convClicks = parseFloat(document.getElementById('convClicks').value) || 0;
             const conversions = parseFloat(document.getElementById('conversions').value) || 0;
-
             const conversionRate = convClicks > 0 ? (conversions / convClicks) * 100 : 0;
             document.getElementById('conversionRateResult').innerText = conversionRate.toFixed(2) + '%';
+
+            // 4. A/B Significance (Proportional Chi-Square Approximation)
+            const clicksA = parseFloat(document.getElementById('abClicksA').value) || 0;
+            const convA = parseFloat(document.getElementById('abConvA').value) || 0;
+            const clicksB = parseFloat(document.getElementById('abClicksB').value) || 0;
+            const convB = parseFloat(document.getElementById('abConvB').value) || 0;
+
+            if(clicksA > 0 && clicksB > 0) {
+                const rateA = convA / clicksA;
+                const rateB = convB / clicksB;
+                
+                // Simple standard error comparison
+                const pPool = (convA + convB) / (clicksA + clicksB);
+                const se = Math.sqrt(pPool * (1 - pPool) * ((1 / clicksA) + (1 / clicksB)));
+                
+                if(se > 0) {
+                    const zScore = Math.abs(rateA - rateB) / se;
+                    // Approx confidence from Z-score
+                    let conf = 0;
+                    if (zScore > 2.58) conf = 99.1;
+                    else if (zScore > 1.96) conf = 95.4;
+                    else if (zScore > 1.645) conf = 90.2;
+                    else if (zScore > 1.28) conf = 80.0;
+                    else conf = 50 + (zScore / 1.28) * 30;
+                    
+                    if (conf > 99.9) conf = 99.9;
+                    document.getElementById('abConfidence').innerText = conf.toFixed(1) + '%';
+                    
+                    const msgEl = document.getElementById('abWinnerMessage');
+                    if(conf >= 90) {
+                        msgEl.innerText = rateB > rateA ? "Variant B is statistically superior with extreme certainty. Scale up Variant B immediately." : "Variant A (Control) remains the stronger asset. Discontinue Variant B.";
+                    } else {
+                        msgEl.innerText = "Data volume insufficient to claim a definitive winner. Run the experiment longer to avoid false attribution.";
+                    }
+                }
+            }
         }
 
-        // Initialize calculations on first boot
         window.onload = calculateAll;
     </script>
 </body>
